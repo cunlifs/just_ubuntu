@@ -1,0 +1,14 @@
+AddHandler cgi-script .sh
+Alias /lpar2rrd  "/home/lpar2rrd/lpar2rrd/www/"
+<Directory "/home/lpar2rrd/lpar2rrd/www/">
+    Options Indexes FollowSymLinks 
+    Require all granted
+</Directory>
+# CGI-BIN
+ScriptAlias /lpar2rrd-cgi/ "/home/lpar2rrd/lpar2rrd/lpar2rrd-cgi/"
+<Directory "/home/lpar2rrd/lpar2rrd/lpar2rrd-cgi">
+    AllowOverride None
+    Options +ExecCGI +SymLinksIfOwnerMatch
+    Require all granted
+    SetHandler cgi-script
+</Directory>
