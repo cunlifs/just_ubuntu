@@ -4,6 +4,8 @@ MAINTAINER Stuart Cunliffe,UK s_cunliffe@uk.ibm.com
 ENV http_proxy http://9.196.156.29:3128
 ENV https_proxy https://9.196.156.29:3128
 COPY liblwp-protocol-https-perl_6.04-2_all.deb /tmp
+COPY apache2_conf /tmp
+COPY httpd_conf /tmp
 RUN apt-get update
 RUN apt-get install -y wget
 RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
@@ -13,4 +15,5 @@ RUN apt-get install /tmp/liblwp-protocol-https-perl_6.04-2_all.deb -y --allow-do
 RUN apt-get install libcrypt-ssleay-perl libio-socket-ssl-perl libmozilla-ldap-perl libxml-parser-perl -y
 RUN apt-mark hold liblwp-protocol-https-perl
 #RUN apt-get install httpd -y
+
 CMD sleep 60000
