@@ -18,5 +18,5 @@ RUN apt-mark hold liblwp-protocol-https-perl
 RUN service apache2 restart
 RUN a2enmod cgi 
 RUN echo /tmp/httpd_conf >> /etc/apache2/apache2.conf
-EXPOSE 80
+EXPOSE 8080
 CMD sleep 60000
