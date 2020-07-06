@@ -12,5 +12,5 @@ RUN apt-get install librrdp-perl libxml-sax-perl libxml-simple-perl libtimedate-
 RUN apt-get install /tmp/liblwp-protocol-https-perl_6.04-2_all.deb -y --allow-downgrades
 RUN apt-get install libcrypt-ssleay-perl libio-socket-ssl-perl libmozilla-ldap-perl libxml-parser-perl -y
 RUN apt-mark hold liblwp-protocol-https-perl
-RUN apt-get install httpd
+RUN apt-get install httpd -y
 CMD sleep 60000
