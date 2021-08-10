@@ -15,8 +15,9 @@ RUN apt-get install /tmp/liblwp-protocol-https-perl_6.04-2_all.deb -y --allow-do
 RUN apt-get install libcrypt-ssleay-perl libio-socket-ssl-perl libmozilla-ldap-perl libxml-parser-perl -y
 RUN apt-mark hold liblwp-protocol-https-perl
 #RUN apt-get install httpd -y
-RUN service apache2 restart
+#RUN service apache2 restart
 RUN a2enmod cgi 
-RUN echo /tmp/httpd_conf >> /etc/apache2/apache2.conf
+RUN cat /tmp/apache2_conf >> /etc/apache2/apache2.conf
+RUN service apache2 restart
 EXPOSE 8080
 CMD sleep 60000
