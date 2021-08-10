@@ -1,4 +1,4 @@
-FROM ubuntu:devel
+FROM ubuntu@sha256:5abe5c5414cae21985d2cc4795650a092d72b96a379ae2c618dc9de73835dc8c
 CMD /bin/bash
 MAINTAINER Stuart Cunliffe,UK s_cunliffe@uk.ibm.com
 ENV http_proxy http://9.196.156.29:3128
