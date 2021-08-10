@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:devel
 CMD /bin/bash
 MAINTAINER Stuart Cunliffe,UK s_cunliffe@uk.ibm.com
 ENV http_proxy http://9.196.156.29:3128
