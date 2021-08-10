@@ -1,4 +1,6 @@
-FROM ubuntu@sha256:5abe5c5414cae21985d2cc4795650a092d72b96a379ae2c618dc9de73835dc8c
+# - PPC64LE FROM ubuntu@sha256:5abe5c5414cae21985d2cc4795650a092d72b96a379ae2c618dc9de73835dc8c
+# Below is ARM image
+FROM ubuntu@sha256:c0dd38485ed8b6e149d2fc935d1c61a3b750cda3b3eace0ad6df4abe33fa2b90
 CMD /bin/bash
 MAINTAINER Stuart Cunliffe,UK s_cunliffe@uk.ibm.com
 ENV http_proxy http://9.196.156.29:3128
